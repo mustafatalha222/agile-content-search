@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background-color: #fff;
+  text-align: center;
+}
+
+.logo {
+  max-width: 300px;
+}
