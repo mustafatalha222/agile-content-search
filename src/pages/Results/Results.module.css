@@ -1,0 +1,38 @@
+.content {
+  display: flex;
+  flex: 1;
+  gap: 2rem;
+  margin: 0 5rem;
+}
+
+.listWrapper {
+  flex: 1 1 70%;
+}
+
+.detailsWrapper {
+  flex: 1 1 30%;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .detailsWrapper {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .modalWrapper {
+    display: none;
+  }
+}
+
+/* Skeleton styling */
+.skeletonList {
+  margin: 2rem 11vw;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}

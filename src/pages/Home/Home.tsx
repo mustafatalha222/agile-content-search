@@ -24,11 +24,13 @@ function Home() {
     <>
       <Header />
       <div className={styles.container}>
-        <img
-          src="https://lh3.googleusercontent.com/d_S5gxu_S1P6NR1gXeMthZeBzkrQMHdI5uvXrpn3nfJuXpCjlqhLQKH_hbOxTHxFhp5WugVOEcl4WDrv9rmKBDOMExhKU5KmmLFQVg"
-          alt="Google"
-          className={styles.logo}
-        />
+        <figure className={styles.logoWrapper}>
+          <img
+            src="https://lh3.googleusercontent.com/d_S5gxu_S1P6NR1gXeMthZeBzkrQMHdI5uvXrpn3nfJuXpCjlqhLQKH_hbOxTHxFhp5WugVOEcl4WDrv9rmKBDOMExhKU5KmmLFQVg"
+            alt="Google"
+            className={styles.logo}
+          />
+        </figure>
         <SearchInput value={searchTerm} onChange={handleSearchChange} onClear={handleClear} />
         <button onClick={handleSearch} disabled={!searchTerm}>
           Search

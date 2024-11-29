@@ -1,17 +1,17 @@
 import React from 'react'
 import styles from './SearchInput.module.css'
 
-interface SearchInputProps {
+type SearchInputProps = {
   value: string
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   onClear: () => void
-  style?: React.CSSProperties
-  inputStyle?: React.CSSProperties
+  searchWrapper?: string
+  inputStyle?: string
 }
 
-const SearchInput = ({ value, onChange, onClear, style, inputStyle }: SearchInputProps) => {
+const SearchInput = ({ value, onChange, onClear, searchWrapper, inputStyle }: SearchInputProps) => {
   return (
-    <div className={styles.searchWrapper} style={style}>
+    <div className={`${styles.searchWrapper} ${searchWrapper}`}>
       <div className={styles.iconWrapper}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -34,8 +34,7 @@ const SearchInput = ({ value, onChange, onClear, style, inputStyle }: SearchInpu
         value={value}
         onChange={onChange}
         placeholder="Search for animals..."
-        className={styles.input}
-        style={inputStyle}
+        className={`${styles.input} ${inputStyle}`}
       />
 
       {value && (

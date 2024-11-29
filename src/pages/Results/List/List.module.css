@@ -1,0 +1,34 @@
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.title {
+  color: #1a0dab;
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: inline;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+.url {
+  font-size: 0.8rem;
+  color: #4d5156;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #4d5156;
+  line-height: 1.5;
+}

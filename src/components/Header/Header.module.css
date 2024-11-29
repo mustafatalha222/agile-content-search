@@ -5,16 +5,7 @@
   padding: 0.1rem 1rem;
   background-color: #f8f9fa;
   border-bottom: 1px solid #e9ecef;
-}
-
-.search {
-  display: flex;
-  align-items: end;
-  gap: 1rem;
-}
-
-.logo {
-  max-width: 80px;
+  gap: 2rem;
 }
 
 .title {
@@ -27,4 +18,29 @@
   height: 30px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.logo {
+  max-width: 80px;
+}
+
+.search {
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+}
+
+.inputStyle {
+  padding: 6px;
+  padding-left: 2.2rem;
+}
+
+.searchWrapper {
+  width: 450px;
+}
+
+@media (max-width: 768px) {
+  .searchWrapper {
+    width: auto;
+  }
 }

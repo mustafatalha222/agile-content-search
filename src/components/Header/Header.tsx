@@ -1,8 +1,9 @@
 import { memo } from 'react'
 import styles from './Header.module.css'
 import SearchInput from '../SearchInput/SearchInput'
+import { Link } from 'react-router-dom'
 
-interface HeaderProps {
+type HeaderProps = {
   value?: string
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
   onClear?: () => void
@@ -14,17 +15,19 @@ const Header = ({ value, onChange, onClear, showSearch = false }: HeaderProps) =
     <header className={styles.header}>
       {showSearch ? (
         <div className={styles.search}>
-          <img
-            src="https://lh3.googleusercontent.com/d_S5gxu_S1P6NR1gXeMthZeBzkrQMHdI5uvXrpn3nfJuXpCjlqhLQKH_hbOxTHxFhp5WugVOEcl4WDrv9rmKBDOMExhKU5KmmLFQVg"
-            alt="Google"
-            className={styles.logo}
-          />
+          <Link to="/" className={styles.logoLink}>
+            <img
+              src="https://lh3.googleusercontent.com/d_S5gxu_S1P6NR1gXeMthZeBzkrQMHdI5uvXrpn3nfJuXpCjlqhLQKH_hbOxTHxFhp5WugVOEcl4WDrv9rmKBDOMExhKU5KmmLFQVg"
+              alt="Google"
+              className={styles.logo}
+            />
+          </Link>
           <SearchInput
             value={value!}
             onChange={onChange!}
             onClear={onClear!}
-            style={{ maxWidth: 500 }}
-            inputStyle={{ padding: 8, paddingLeft: '2.5rem' }}
+            searchWrapper={styles.searchWrapper}
+            inputStyle={styles.inputStyle}
           />
         </div>
       ) : (
