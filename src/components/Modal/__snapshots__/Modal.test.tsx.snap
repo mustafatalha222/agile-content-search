@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Component should render and match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="modalOverlay"
+  >
+    <div
+      class="modalContent"
+    >
+      Test Modal
+    </div>
+  </div>
+</DocumentFragment>
+`;

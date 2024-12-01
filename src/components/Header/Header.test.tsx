@@ -1,5 +1,4 @@
 import { screen } from '@testing-library/react'
-
 import '@testing-library/jest-dom'
 import userEvent from '@testing-library/user-event'
 import Header from './Header'
@@ -26,10 +25,8 @@ describe('Header Component', () => {
     renderWithRouter(
       <Header showSearch={true} value="test" onChange={mockOnChange} onClear={mockOnClear} onSearch={mockOnSearch} />
     )
-
     const logoElement = screen.getByAltText(/google/i)
     expect(logoElement).toBeInTheDocument()
-
     const searchInput = screen.getByRole('textbox')
     expect(searchInput).toBeInTheDocument()
     expect(searchInput).toHaveValue('test')
@@ -39,7 +36,6 @@ describe('Header Component', () => {
     renderWithRouter(
       <Header showSearch={true} value="" onChange={mockOnChange} onClear={mockOnClear} onSearch={mockOnSearch} />
     )
-
     const user = userEvent.setup()
     const searchInput = screen.getByRole('textbox')
     await user.type(searchInput, 'New Value')

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Details Component should render and match snapshot 1`] = `
+<DocumentFragment>
+  <main
+    class="details"
+  >
+    <div
+      class="imageWrapper"
+    >
+      <img
+        alt="lion"
+        class="image"
+        loading="lazy"
+        src="https://example.com/animal.jpg"
+      />
+    </div>
+    <div
+      class="content"
+    >
+      <header>
+        <div
+          class="url"
+        >
+          https://example.com
+        </div>
+        <h3
+          class="title"
+        >
+          lion
+        </h3>
+      </header>
+      <section
+        class="description"
+      >
+        This is an example description.
+      </section>
+    </div>
+  </main>
+</DocumentFragment>
+`;

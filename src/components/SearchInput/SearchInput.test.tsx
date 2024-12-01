@@ -4,9 +4,14 @@ import '@testing-library/jest-dom'
 import SearchInput from './SearchInput'
 
 describe('SearchInput Component', () => {
-  const mockOnChange = jest.fn()
-  const mockOnClear = jest.fn()
-  const mockOnSearch = jest.fn()
+  let mockOnChange: jest.Mock
+  let mockOnClear: jest.Mock
+  let mockOnSearch: jest.Mock
+  beforeEach(() => {
+    mockOnChange = jest.fn()
+    mockOnClear = jest.fn()
+    mockOnSearch = jest.fn()
+  })
 
   const setup = (value = '') => {
     render(<SearchInput value={value} onChange={mockOnChange} onClear={mockOnClear} onSearch={mockOnSearch} />)
@@ -47,10 +52,10 @@ describe('SearchInput Component', () => {
     expect(mockOnClear).toHaveBeenCalled()
   })
 
-  it('should call onSearch when pressing Enter', async () => {
+  it('should call onSearch on pressing Enter', async () => {
     setup()
     const user = userEvent.setup()
-    const input = screen.getByPlaceholderText(/search/i)
+    const input = screen.getByRole('textbox')
     await user.type(input, '{Enter}')
     expect(mockOnSearch).toHaveBeenCalled()
   })

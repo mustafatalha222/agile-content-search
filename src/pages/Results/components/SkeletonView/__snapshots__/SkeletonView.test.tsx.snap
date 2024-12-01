@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SkeletonView Component should render and match snapshot 1`] = `
+<DocumentFragment>
+  <ul
+    class="skeletonList"
+  >
+    <li
+      class="skeletonListItem"
+    >
+      <div
+        class="skeleton block"
+        data-testid="skeleton"
+        style="height: 12px; width: 200px;"
+      />
+      <div
+        class="skeleton block"
+        data-testid="skeleton"
+        style="height: 15px; width: 300px;"
+      />
+      <div
+        class="skeleton block"
+        data-testid="skeleton"
+        style="height: 20px; width: 80%;"
+      />
+    </li>
+    <li
+      class="skeletonListItem"
+    >
+      <div
+        class="skeleton block"
+        data-testid="skeleton"
+        style="height: 12px; width: 200px;"
+      />
+      <div
+        class="skeleton block"
+        data-testid="skeleton"
+        style="height: 15px; width: 300px;"
+      />
+      <div
+        class="skeleton block"
+        data-testid="skeleton"
+        style="height: 20px; width: 80%;"
+      />
+    </li>
+    <li
+      class="skeletonListItem"
+    >
+      <div
+        class="skeleton block"
+        data-testid="skeleton"
+        style="height: 12px; width: 200px;"
+      />
+      <div
+        class="skeleton block"
+        data-testid="skeleton"
+        style="height: 15px; width: 300px;"
+      />
+      <div
+        class="skeleton block"
+        data-testid="skeleton"
+        style="height: 20px; width: 80%;"
+      />
+    </li>
+    <li
+      class="skeletonListItem"
+    >
+      <div
+        class="skeleton block"
+        data-testid="skeleton"
+        style="height: 12px; width: 200px;"
+      />
+      <div
+        class="skeleton block"
+        data-testid="skeleton"
+        style="height: 15px; width: 300px;"
+      />
+      <div
+        class="skeleton block"
+        data-testid="skeleton"
+        style="height: 20px; width: 80%;"
+      />
+    </li>
+    <li
+      class="skeletonListItem"
+    >
+      <div
+        class="skeleton block"
+        data-testid="skeleton"
+        style="height: 12px; width: 200px;"
+      />
+      <div
+        class="skeleton block"
+        data-testid="skeleton"
+        style="height: 15px; width: 300px;"
+      />
+      <div
+        class="skeleton block"
+        data-testid="skeleton"
+        style="height: 20px; width: 80%;"
+      />
+    </li>
+  </ul>
+</DocumentFragment>
+`;
