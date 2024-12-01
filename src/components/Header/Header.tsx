@@ -8,9 +8,10 @@ type HeaderProps = {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
   onClear?: () => void
   showSearch?: boolean
+  onSearch?: () => void
 }
 
-const Header = ({ value, onChange, onClear, showSearch = false }: HeaderProps) => {
+const Header = ({ value, onChange, onClear, showSearch = false, onSearch }: HeaderProps) => {
   return (
     <header className={styles.header}>
       {showSearch ? (
@@ -28,6 +29,7 @@ const Header = ({ value, onChange, onClear, showSearch = false }: HeaderProps) =
             onClear={onClear!}
             searchWrapper={styles.searchWrapper}
             inputStyle={styles.inputStyle}
+            onSearch={onSearch!}
           />
         </div>
       ) : (

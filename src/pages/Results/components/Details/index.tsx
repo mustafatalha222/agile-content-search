@@ -1,5 +1,5 @@
+import { IAnimal } from '../../../../types/Animal'
 import styles from './Details.module.css'
-import { IAnimal } from '../../../types/Animal'
 
 type DetailsProps = {
   item: IAnimal | null

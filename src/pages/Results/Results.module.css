@@ -20,6 +20,9 @@
   .detailsWrapper {
     display: none;
   }
+  .content {
+    margin: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -28,11 +31,6 @@
   }
 }
 
-/* Skeleton styling */
-.skeletonList {
-  margin: 2rem 11vw;
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+.message {
+  margin: 1rem 11vw;
 }

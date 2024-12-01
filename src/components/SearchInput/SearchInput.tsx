@@ -5,11 +5,18 @@ type SearchInputProps = {
   value: string
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   onClear: () => void
+  onSearch: () => void
   searchWrapper?: string
   inputStyle?: string
 }
 
-const SearchInput = ({ value, onChange, onClear, searchWrapper, inputStyle }: SearchInputProps) => {
+const SearchInput = ({ value, onChange, onClear, searchWrapper, inputStyle, onSearch }: SearchInputProps) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      onSearch()
+    }
+  }
+
   return (
     <div className={`${styles.searchWrapper} ${searchWrapper}`}>
       <div className={styles.iconWrapper}>
@@ -33,7 +40,8 @@ const SearchInput = ({ value, onChange, onClear, searchWrapper, inputStyle }: Se
         type="text"
         value={value}
         onChange={onChange}
-        placeholder="Search for animals..."
+        onKeyDown={handleKeyDown}
+        placeholder="Search for animal..."
         className={`${styles.input} ${inputStyle}`}
       />
 

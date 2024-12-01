@@ -31,7 +31,7 @@ function Home() {
             className={styles.logo}
           />
         </figure>
-        <SearchInput value={searchTerm} onChange={handleSearchChange} onClear={handleClear} />
+        <SearchInput value={searchTerm} onChange={handleSearchChange} onClear={handleClear} onSearch={handleSearch} />
         <button onClick={handleSearch} disabled={!searchTerm}>
           Search
         </button>

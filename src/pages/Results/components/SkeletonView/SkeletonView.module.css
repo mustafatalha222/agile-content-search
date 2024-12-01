@@ -1,0 +1,13 @@
+.skeletonList {
+  margin: 2rem 11vw;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .skeletonList {
+    margin: 2rem 2vw;
+  }
+}

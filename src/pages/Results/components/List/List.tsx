@@ -1,4 +1,4 @@
-import { IAnimal } from '../../../types/Animal'
+import { IAnimal } from '../../../../types/Animal'
 import styles from './List.module.css'
 
 type ListProps = {
