@@ -20,6 +20,10 @@
   object-fit: cover;
 }
 
+.logoLink {
+  max-height: 48px;
+}
+
 .logo {
   max-width: 80px;
 }

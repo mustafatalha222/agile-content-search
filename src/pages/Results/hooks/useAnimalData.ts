@@ -19,9 +19,8 @@ const createAnimal = (id: number): IAnimal => {
 }
 
 const getAnimalData = async (searchValue: string): Promise<IAnimal[]> => {
-  if (!searchValue) return []
-
   await delay(1000) // 1-second delay
+  if (!searchValue) return []
   const allData = Array.from({ length: 100 }, (_, index) => createAnimal(index + 1))
 
   const lowerCaseSearch = searchValue.toLowerCase()
@@ -44,9 +43,7 @@ const useAnimalData = (searchValue: string) => {
   }, [])
 
   useEffect(() => {
-    if (searchValue) {
-      fetchData(searchValue)
-    }
+    fetchData(searchValue)
   }, [searchValue, fetchData])
 
   return { data, loading, setLoading }

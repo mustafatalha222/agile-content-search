@@ -11,19 +11,16 @@ import List from './components/List/List'
 import SkeletonView from './components/SkeletonView'
 
 function Results() {
-  const [searchValue, setSearchValue] = useState('')
   const [selectedItem, setSelectedItem] = useState<IAnimal | null>(null)
   const [searchParams, setSearchParams] = useSearchParams()
   const query = searchParams.get('search') || ''
+  const [searchValue, setSearchValue] = useState(query)
   const debouncedSearchValue = useDebounce(searchValue, 500)
   const { data, loading } = useAnimalData(debouncedSearchValue)
 
   useEffect(() => {
-    setSearchValue(query)
-  }, [query])
-
-  useEffect(() => {
     setSelectedItem(null)
+    handleSearchChange()
   }, [debouncedSearchValue])
 
   const handleSearchChange = () => setSearchParams({ search: searchValue })

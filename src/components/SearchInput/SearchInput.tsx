@@ -57,6 +57,7 @@ const SearchInput = ({ value, onChange, onClear, searchWrapper, inputStyle, onSe
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
+            data-testid="clear-icon"
           >
             <line x1="6" y1="18" x2="18" y2="6" />
             <line x1="6" y1="6" x2="18" y2="18" />

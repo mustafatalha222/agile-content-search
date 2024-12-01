@@ -9,7 +9,7 @@ type SkeletonProps = {
 
 const Skeleton = ({ height = '50px', width = '100%', variant = 'block' }: SkeletonProps) => {
   const skeletonClass = `${styles.skeleton} ${styles[variant]}`
-  return <div className={skeletonClass} style={{ height, width }} />
+  return <div className={skeletonClass} style={{ height, width }} data-testid="skeleton" />
 }
 
 export default memo(Skeleton)
